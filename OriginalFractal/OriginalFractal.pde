@@ -5,9 +5,11 @@ void setup(){
 float angle = 0;
 void draw(){
   background((float)Math.random()*225, (float)Math.random()*225, (float)Math.random()*225);
-  drawTri(width/2, height/2, 1600, angle++);
-  drawPropeller(width/2, height/2, 800, angle++);
-  drawUno(width/2, height/2, 400, angle++);
+  drawTri(width/2, height/2, 1600, angle);
+  drawPropeller(width/2, height/2, 800, angle);
+  drawUno(width/2, height/2, 400, angle);
+  if(mousePressed)
+    angle++;
 }
 
 void drawPropeller(float x, float y, float leng, float ang) {
